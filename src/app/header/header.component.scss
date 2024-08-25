@@ -1,0 +1,74 @@
+/* header.component.css */
+.header-toolbar {
+  background-color: #343a40;
+  padding: 10px 0;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ff6a00;
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.nav-link {
+  font-size: 1.1rem;
+  margin: 0 10px;
+  color: #f8f9fa !important;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active-link {
+  color: #ff6a00 !important;
+}
+
+.nav-link:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #ff6a00;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.nav-link:hover:after,
+.nav-link.active-link:after {
+  width: 100%;
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='white'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.nav-item svg {
+  width: 24px;
+  height: 24px;
+  fill: #f8f9fa;
+  transition: fill 0.3s ease;
+}
+
+.nav-item svg:hover {
+  fill: #ff6a00;
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .nav-link {
+    margin: 10px 0;
+  }
+}
