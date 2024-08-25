@@ -23,6 +23,7 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { MyEducationComponent } from './my-education/my-education.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { HttpClientModule } from '@angular/common/http';
     ProjectsComponent,
     ContactComponent,
     FooterComponent,
-    MyEducationComponent
+    MyEducationComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
