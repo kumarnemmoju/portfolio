@@ -1,60 +1,43 @@
 <!-- my-education.component.html -->
-<div class="education-page container-fluid mt-5">
-    <div class="education-content text-center">
-      <h2 class="section-title">My Education</h2>
-      <p class="education-description mx-auto">
-        Below is a detailed overview of my academic journey, highlighting key milestones and the prestigious institutions where I have pursued my studies.
-      </p>
-    </div>
-  
-    <div class="education-timeline mt-5">
-      <!-- Sacred Heart University -->
-      <div class="timeline-item">
-        <div class="timeline-icon">
-          <i class="fas fa-university"></i>
+<div class="container-fluid mt-5">
+
+  <div class="education-timeline mt-5">
+    <div *ngFor="let education of educationList" class="education-card">
+      <div class="timeline-content">
+        <div>
+          <img
+            [src]="education.logo"
+            alt="{{ education.institution }} logo"
+            class="college-logo"
+          />
         </div>
-        <div class="timeline-content">
-          <h3 class="education-degree">M.Sc. in Computer Science & IT</h3>
-          <p class="institution-name">Sacred Heart University, Bridgeport, Connecticut, USA</p>
-          <p class="education-duration">GPA: 3.8/4 | Pursuing (Expected to be completed by Dec’24)</p>
-          <p class="education-description">
-            Sacred Heart University (SHU) is a private Catholic university renowned for its commitment to academic excellence, cutting-edge research, and fostering a vibrant campus community. Located in Fairfield County, Connecticut, SHU offers a dynamic and interdisciplinary learning environment, empowering students to achieve their professional and personal goals.
-          </p>
-          <div class="education-highlights">
-            <strong>Key Highlights:</strong>
-            <ul>
-              <li>Ranked among the top universities in the Northeast region by U.S. News & World Report.</li>
-              <li>State-of-the-art facilities and laboratories supporting advanced research in Computer Science and IT.</li>
-              <li>Strong industry connections providing students with internship and job opportunities in top tech companies.</li>
-            </ul>
-          </div>
-          <a href="https://www.sacredheart.edu" target="_blank" class="btn btn-primary">Visit SHU Website</a>
+        <h3 class="education-degree section-title ">{{ education.degree }}</h3>
+        <p class="institution-name">{{ education.institution }}</p>
+        <p class="education-duration">{{ education.duration }}</p>
+        <p class="education-description">{{ education.description }}</p>
+        <div class="education-highlights">
+          <strong>Key Highlights:</strong>
+          <ul>
+            <li *ngFor="let highlight of education.highlights">
+              {{ highlight }}
+            </li>
+          </ul>
         </div>
-      </div>
-  
-      <!-- Lovely Professional University -->
-      <div class="timeline-item">
-        <div class="timeline-icon">
-          <i class="fas fa-university"></i>
-        </div>
-        <div class="timeline-content">
-          <h3 class="education-degree">B.Tech in Electronics and Communication Engineering</h3>
-          <p class="institution-name">Lovely Professional University, Jalandhar, Punjab</p>
-          <p class="education-duration">GPA: 6.17 | 2018</p>
-          <p class="education-description">
-            Lovely Professional University (LPU) is one of India’s largest private universities, known for its diverse academic offerings, innovative teaching methods, and a vibrant student life. Located in Jalandhar, Punjab, LPU is a leader in providing quality education and is recognized for its state-of-the-art infrastructure and strong focus on research and development.
-          </p>
-          <div class="education-highlights">
-            <strong>Key Highlights:</strong>
-            <ul>
-              <li>Ranked among the top 100 universities in India by the NIRF (National Institutional Ranking Framework).</li>
-              <li>International collaborations with over 200 universities worldwide.</li>
-              <li>World-class campus with modern amenities and facilities for holistic student development.</li>
-            </ul>
-          </div>
-          <a href="https://www.lpu.in" target="_blank" class="btn btn-primary">Visit LPU Website</a>
-        </div>
+        <a
+          [href]="education.website"
+          target="_blank"
+          class="btn btn-primary"
+          *ngIf="education.college === 'lpu'"
+          >Visit LPU</a
+        >
+        <a
+          [href]="education.website"
+          target="_blank"
+          class="btn btn-primary"
+          *ngIf="education.college === 'shu'"
+          >Visit SHU</a
+        >
       </div>
     </div>
   </div>
-  
+</div>

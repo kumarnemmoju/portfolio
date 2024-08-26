@@ -1,6 +1,5 @@
 /* about.component.css */
-.container-fluid {
-  max-width: 1200px;
+.container {
   margin: 0 auto;
   padding: 20px;
 }
@@ -16,10 +15,16 @@
   color: transparent;
 }
 
+.about-content {
+  background-color: #343a40; 
+  color: white;/* Added white background */
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Added shadow to match other sections */
+}
+
 .about-description {
   font-size: 1.2rem;
-  color: #666;
-  max-width: 800px;
+  color: white;
   margin-bottom: 40px;
   line-height: 1.8;
 }
@@ -43,45 +48,63 @@
   line-height: 1.6;
 }
 
-.personal-details {
-  background-color: #f8f9fa;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
+/* General Section Styling */
 .details-title {
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 20px;
 }
 
-.details-list {
-  list-style: none;
-  padding: 0;
-  font-size: 1.1rem;
-  color: #555;
-  line-height: 2;
+.text-center {
+  text-align: center;
 }
 
-.download-resume {
-  padding: 12px 25px;
-  font-size: 1.1rem;
-  border-radius: 30px;
-  text-transform: uppercase;
+/* Angular Experience Section */
+.angular-experience {
+  background-color: #f8f9fa;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.angular-description {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  line-height: 1.8;
+  margin: 0 auto;
+}
+
+/* Specific Sections */
+.languages-section,
+.address-section,
+.visa-section,
+.nationality-section {
+  background-color: #f1f1f1;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.languages-text,
+.address-text,
+.visa-text,
+.nationality-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0;
 }
 
 .career-highlights {
   background-color: #f8f9fa;
   padding: 30px;
-  border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .highlight-box {
   padding: 20px;
   margin: 20px 0;
-  border-radius: 8px;
   background-color: white;
 }
 

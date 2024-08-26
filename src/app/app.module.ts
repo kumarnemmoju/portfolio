@@ -9,6 +9,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatExpansionModule} from '@angular/material/expansion';
 import { MatInputModule } from '@angular/material/input';
 
 // Reactive Forms Module
@@ -19,12 +20,11 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
-import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { MyEducationComponent } from './my-education/my-education.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NotfoundComponent } from './notfound/notfound.component';
-
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +32,6 @@ import { NotfoundComponent } from './notfound/notfound.component';
     HomeComponent,
     AboutComponent,
     ProjectsComponent,
-    ContactComponent,
     FooterComponent,
     MyEducationComponent,
     NotfoundComponent
@@ -41,6 +40,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatExpansionModule,
     FormsModule,
     ReactiveFormsModule,
     MatToolbarModule,
@@ -50,7 +50,8 @@ import { NotfoundComponent } from './notfound/notfound.component';
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

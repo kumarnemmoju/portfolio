@@ -1,13 +1,15 @@
-import { Component } from '@angular/core';
+// my-education.component.ts
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-my-education',
   templateUrl: './my-education.component.html',
-  styleUrl: './my-education.component.scss'
+  styleUrls: ['./my-education.component.scss']
 })
-export class MyEducationComponent {
+export class MyEducationComponent implements OnInit {
   educationList = [
     {
+      college : 'shu',
       degree: 'M.Sc. in Computer Science & IT',
       institution: 'Sacred Heart University, Bridgeport, Connecticut, USA',
       duration: 'GPA: 3.8/4 | Pursuing (Expected to be completed by Dec’24)',
@@ -17,9 +19,11 @@ export class MyEducationComponent {
         'State-of-the-art facilities and laboratories supporting advanced research in Computer Science and IT.',
         'Strong industry connections providing students with internship and job opportunities in top tech companies.'
       ],
-      website: 'https://www.sacredheart.edu'
+      website: 'https://www.sacredheart.edu',
+      logo: 'https://images.squarespace-cdn.com/content/v1/623126b50d2dfb281caaafd3/9233aac4-c531-436f-9e75-ff48fed231d4/Sacred-Heart-University-logo.jpg'  // Add logo URL here
     },
     {
+      college : 'lpu',
       degree: 'B.Tech in Electronics and Communication Engineering',
       institution: 'Lovely Professional University, Jalandhar, Punjab',
       duration: 'GPA: 6.17 | 2018',
@@ -29,7 +33,8 @@ export class MyEducationComponent {
         'International collaborations with over 200 universities worldwide.',
         'World-class campus with modern amenities and facilities for holistic student development.'
       ],
-      website: 'https://www.lpu.in'
+      website: 'https://www.lpu.in',
+      logo: 'https://www.lpu.in/lpu-assets/images/logo/logo.svg'  // Add logo URL here
     }
   ];
 
@@ -37,5 +42,4 @@ export class MyEducationComponent {
 
   ngOnInit(): void {
   }
-
 }

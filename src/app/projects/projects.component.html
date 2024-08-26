@@ -1,5 +1,4 @@
-<!-- projects.component.html -->
-<div class="projects-page container-fluid mt-5">
+<div class="projects-page container mt-5">
   <h2 class="section-title text-center">My Projects</h2>
   <div class="projects-container container-fluid">
     <div class="row">
@@ -12,7 +11,21 @@
           </mat-card-header>
           <mat-card-content>
             <p><strong>Environment:</strong> {{ project.environment }}</p>
-            <p>{{ project.fullDescription }}</p>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  More Details
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <p>{{ project.fullDescription }}</p>
+              <div>
+                <!-- Add huge content here for each project -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquet varius quam, sit amet ultrices lectus ullamcorper nec. Vivamus venenatis tincidunt purus, et volutpat ligula blandit id. Quisque vestibulum ipsum eu dolor consectetur, ut commodo eros suscipit. Morbi non hendrerit urna, vel lacinia sapien.</p>
+                <p>In non sem eget est feugiat pellentesque. Nulla facilisi. Duis tristique, orci ac feugiat viverra, lorem metus fringilla sem, a dapibus nisi arcu et nunc. Curabitur cursus dignissim tincidunt. Donec nec eros nec justo fermentum porttitor nec ac urna. Nam vehicula nisl et sem consequat scelerisque. Suspendisse potenti. Mauris eget lectus libero. Donec id lectus sed ligula fringilla cursus.</p>
+                <p>Aenean sed magna at felis facilisis fermentum. Integer porta tristique eros, sed fringilla purus sagittis at. Cras efficitur, nunc id tincidunt convallis, elit eros tristique quam, id cursus magna nulla id justo. Donec vel sem ut turpis pellentesque commodo. Fusce auctor lectus non magna porta tincidunt. Duis eu tortor sit amet est sollicitudin efficitur. Aliquam erat volutpat.</p>
+                <p>Nam eu leo convallis, sodales erat at, varius velit. Sed nec malesuada purus. Suspendisse potenti. Integer nec odio quis felis dignissim bibendum. Etiam varius felis eu massa efficitur, vel pretium lectus laoreet. Sed scelerisque quam ac tellus dapibus vehicula. Nulla vel sapien vitae turpis mollis fermentum. Curabitur eu tortor vel lorem ornare fermentum.</p>
+              </div>
+            </mat-expansion-panel>
           </mat-card-content>
         </mat-card>
       </div>
@@ -21,9 +34,9 @@
 </div>
 
 <!-- Company Experience Section -->
-<div class="company-experience container-fluid mt-5 py-5">
+<div class=" container mt-5 py-5">
   <h2 class="section-title text-center">My Professional Experience</h2>
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-md-6 col-lg-4 mb-4" *ngFor="let company of companies">
         <div class="company-card shadow p-4">
