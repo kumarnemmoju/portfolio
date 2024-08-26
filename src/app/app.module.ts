@@ -25,6 +25,7 @@ import { MyEducationComponent } from './my-education/my-education.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NotfoundComponent } from './notfound/notfound.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     ProjectsComponent,
     FooterComponent,
     MyEducationComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    ScrollToTopComponent
   ],
   imports: [
     BrowserModule,
