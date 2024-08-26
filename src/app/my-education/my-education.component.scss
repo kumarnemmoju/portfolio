@@ -3,7 +3,6 @@
   background-color: #343a40;
   color: white !important;
   padding: 30px;
-  width: 100%;
   margin-bottom: 30px;
 }
 
@@ -97,4 +96,7 @@
   .timeline-content {
     flex: 0 0 100%; /* Make each card full-width on smaller screens */
   }
+}
+.education-card:last-child .timeline-content {
+  margin-bottom: 30px;
 }

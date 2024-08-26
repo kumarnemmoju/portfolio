@@ -36,7 +36,9 @@ $uday-portfolio-theme: mat.define-theme((
 // @include mat.color-variants-backwards-compatibility($uday-portfolio-theme);
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
+html, body { height: 100%; 
+  font-family: 'Roboto', sans-serif !important;
+}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 body {
